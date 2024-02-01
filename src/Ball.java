@@ -5,14 +5,14 @@ public class Ball {
     private int xspeed;
     private int yspeed;
     private int x,y;
-//comment
-    public Ball(int x,int y){
+
+    public Ball(int x,int y,int size,int xspeed,int yspeed,Color color){
         this.x = x;
         this.y = y;
-        size = 10;
-        xspeed = 5;
-        yspeed = 5;
-        color = Color.BLUE;
+        this.size = size;
+        this.xspeed = xspeed;
+        this.yspeed = yspeed;
+        this.color = color;
     }
 
     public void draw(Graphics g2){
@@ -32,7 +32,7 @@ public class Ball {
         if(y < 10){
             yspeed = (yspeed - (yspeed*2));
         }
-        if(y > 590) {
+        if(y > 450) {
             yspeed = (yspeed - (yspeed * 2));
         }
     }
