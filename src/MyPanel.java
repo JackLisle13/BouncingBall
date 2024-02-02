@@ -7,6 +7,7 @@ public class MyPanel extends JPanel {
 
     public MyPanel() {
         setBackground(Color.WHITE);
+        setPreferredSize(new Dimension(500,500));
         for (int i = 0; i < myBall.length; i++) {
             myBall[i] = new Ball(((int) (Math.random() * 450)), ((int) (Math.random() * 450)),((int) (Math.random() * 50)+1),((int) (Math.random() * 5)+1),((int) (Math.random() * 5)+1),new Color(((int) (Math.random() * 250)+1),((int) (Math.random() * 250)+1),((int) (Math.random() * 250)+1)));
         }
@@ -19,7 +20,7 @@ public class MyPanel extends JPanel {
 
         for (Ball ball : myBall) {
             ball.draw(g);
-            ball.move();
+            ball.move(this);
         }
 
         try {

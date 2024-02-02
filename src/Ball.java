@@ -1,4 +1,5 @@
 import java.awt.*;
+import javax.swing.*;
 public class Ball {
     private int size;
     private Color color;
@@ -20,20 +21,20 @@ public class Ball {
         g2.fillOval(x,y,size,size);
     }
 
-    public void move() {
+    public void move(JPanel panel) {
             x += xspeed;
             y += yspeed;
-        if (x > 490){
-            xspeed = (xspeed - (xspeed*2));
+        if (x > (panel.getWidth() - size)){
+            xspeed = -(int)(Math.random()*10);
         }
-        if(x < 1){
-            xspeed = (xspeed - (xspeed*2));
+        if(x < size){
+            xspeed = (int)(Math.random()*10);
         }
-        if(y < 10){
-            yspeed = (yspeed - (yspeed*2));
+        if(y < (10 + size)){
+            yspeed = (int)(Math.random()*10);
         }
         if(y > 450) {
-            yspeed = (yspeed - (yspeed * 2));
+            yspeed = -(int)(Math.random()*10);
         }
     }
 
