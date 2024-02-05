@@ -27,10 +27,10 @@ public class Ball {
         if (x > (panel.getWidth() - size)){
             xspeed = -(int)(Math.random()*10);
         }
-        if(x < size){
+        if(x < 0){
             xspeed = (int)(Math.random()*10);
         }
-        if(y < (10 + size)){
+        if(y < 0){
             yspeed = (int)(Math.random()*10);
         }
         if(y > (panel.getHeight() - size)) {
