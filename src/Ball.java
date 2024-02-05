@@ -33,7 +33,7 @@ public class Ball {
         if(y < (10 + size)){
             yspeed = (int)(Math.random()*10);
         }
-        if(y > 450) {
+        if(y > (panel.getHeight() - size)) {
             yspeed = -(int)(Math.random()*10);
         }
     }
