@@ -21,6 +21,28 @@ public class Ball {
         g2.fillOval(x,y,size,size);
     }
 
+    public int getx(){
+        return(x);
+    }
+    public int gety(){
+        return(y);
+    }
+
+    public void bounce(){
+        if (xspeed >= 0){
+            xspeed = -(int)(Math.random()*10);
+        }
+        if(xspeed < 0){
+            xspeed = (int)(Math.random()*10);
+        }
+        if(yspeed < 0){
+            yspeed = (int)(Math.random()*10);
+        }
+        if(yspeed >= 0) {
+            yspeed = -(int)(Math.random()*10);
+        }
+    }
+
     public void move(JPanel panel) {
             x += xspeed;
             y += yspeed;
