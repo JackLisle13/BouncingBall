@@ -24,7 +24,7 @@ public class MyPanel extends JPanel {
 
         for(int i = 0; i < myBall.length/2; i++) {
             for(int j = myBall.length-1; j > myBall.length/2; j--){
-                if(  ( ((myBall[i].getx() - myBall[j].getx()) < 10) && ((myBall[i].getx() - myBall[j].getx()) > -10)) && ((myBall[i].gety() - myBall[j].gety()) < 10) && ((myBall[i].gety() - myBall[j].gety()) > -10)){
+                if(  ( ((myBall[i].getx() - myBall[j].getx()) < 20) && ((myBall[i].getx() - myBall[j].getx()) > -20)) && ((myBall[i].gety() - myBall[j].gety()) < 20) && ((myBall[i].gety() - myBall[j].gety()) > -20)){
                     System.out.println("Bounce");
                     myBall[i].bounce();
                     myBall[j].bounce();
